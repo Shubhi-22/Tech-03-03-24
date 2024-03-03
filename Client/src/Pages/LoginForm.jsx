@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of
 import './LoginForm.css'; // Import the CSS file
 
 const LoginForm = () => {
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
+  const REACT_APP_SERVER_HOSTNAME = process.env.REACT_APP_SERVER_HOSTNAME; // Initialize useNavigate hook
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -30,7 +31,7 @@ const LoginForm = () => {
     if (isLogin) {
       // Make login API call
       try {
-        const response = await fetch('http://localhost:5000/api/LogIn', {
+        const response = await fetch(`${REACT_APP_SERVER_HOSTNAME}/api/LogIn`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -53,7 +54,7 @@ const LoginForm = () => {
     } else {
       // Make register API call
       try {
-        const response = await fetch('http://localhost:5000/api/Register', {
+        const response = await fetch(`${REACT_APP_SERVER_HOSTNAME}/api/Register`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
