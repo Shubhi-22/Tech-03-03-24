@@ -1,0 +1,64 @@
+#floatingInput {
+    background-color: var(--black-20);
+}
+
+#lbl2 {
+    color: var(--prime-1-100);
+}
+
+/*Error message display area*/
+
+.hint {
+    float: left;
+    font-size: 12px;
+}
+
+
+/* color change*/
+
+.fa-circle-xmark {
+    position: absolute;
+    right: 10px;
+    margin-top: -45px;
+}
+
+div .form-floating.error input {
+    border-color: var(--danger-80);
+    border-width: 2px;
+}
+
+div .form-floating.error label {
+    color: var(--danger-80);
+}
+
+div .form-floating.error .fa-circle-xmark {
+    color: var(--danger-80);
+}
+
+div .form-floating.error .hint {
+    color: var(--danger-80);
+}
+
+div .form-floating.success input {
+    border: none;
+    background-color: var(--black-20);
+}
+
+div .form-floating.success label {
+    color: var(--prime-1-100);
+}
+
+div .form-floating.success .hint {
+    color: var(--black-30);
+}
+
+.form{
+    margin-left: 50px;
+}
+
+.btn-sub{
+    margin-top: 50px;
+
+}
+
+
